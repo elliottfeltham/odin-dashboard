@@ -1,5 +1,14 @@
 /* Variables */
 
+:root {
+	--primary-background: #172b23;
+	--secondary-background: #2b4c3c;
+	--primary-text: #fff;
+	--secondary-text: #c8c8c8;
+	--primary-accent: #2f6844;
+	--secondary-accent: #1c453f;
+}
+
 /* Reset */
 
 *,
@@ -14,6 +23,7 @@
 
 html,
 body {
+	font-family: "Ubuntu";
 	height: 100%;
 }
 
@@ -35,6 +45,10 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+ul,
+ol {
+	list-style: none;
 }
 
 p,
@@ -70,21 +84,21 @@ h6 {
 }
 
 header {
-	background-color: red;
-	grid-column: 1 / -1;
+	background-color: var(--primary-background);
+	grid-column: 2 / -1;
 	grid-row: 1 / 2;
 	border: 1px solid black;
 }
 
 nav {
-	background-color: blue;
+	background-color: var(--secondary-background);
 	grid-column: 1 / 2;
-	grid-row: 2 / -1;
+	grid-row: 1 / -1;
 	border: 1px solid black;
 }
 
 main {
-	background-color: yellow;
+	background-color: var(--primary-background);
 	grid-column: 2 / -1;
 	grid-row: 2 / -1;
 	border: 1px solid black;

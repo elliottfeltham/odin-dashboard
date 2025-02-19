@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Dashboard</title>
 </head>
@@ -13,17 +18,183 @@
         <header>
             <div class="header-container">
                 <div class="search-bar">
-                    <img>
+                    <img id="search" alt="magnifying glass">
                     <input type="search" name="search-bar" id="search-bar">
+                </div>
+                <div class="account-container">
+                    <img id="notification" alt="bell">
+                    <img id="user-icon-small" alt="profile picture">
+                    <h4>Elliott Feltham</h4>
+                </div>
+                <div class="header-text">
+                    <img id="user-icon-large" alt="profile picture">
+                    <span id="greeting">Hi There,</span>
+                    <h2>Elliott Feltham</h2>
+                </div>
+                <div class="header-buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
                 </div>
             </div>
         </header>
         <nav>
             <div class="sidebar-container">
+                <div class="dashboard-title">
+                    <img id="dashboard-icon" alt="dashboard icon">
+                    <h1>Dashboard</h1>
+                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="home-icon" alt="home icon">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="profile-icon" alt="profile icon">
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="messages-icon" alt="messages icon">
+                            <span>Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="history-icon" alt="history icon">
+                            <span>History</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="tasks-icon" alt="tasks icon">
+                            <span>Tasks</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="communites-icon" alt="communites icon">
+                            <span>Communites</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="settings-icon" alt="settings icon">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="support-icon" alt="support icon">
+                            <span>Support</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">
+                            <img id="privacy-icon" alt="privacy icon">
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
         <main>
             <div class="content-container">
+                <div class="projects-container">
+                    <h3 id="project-heading">Your Projects</h3>
+                    <ul>
+                        <li class="project-card">
+                            <h4>Super Cool Project</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="project-card">
+                            <h4>Less Cool Project</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="project-card">
+                            <h4>Impossible App</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="project-card">
+                            <h4>Easy Peasy App</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="project-card">
+                            <h4>Ad Blocker</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="project-card">
+                            <h4>Money Maker</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="announcments-container">
+                    <h3 id="announcments-heading">Announcments</h3>
+                    <ul>
+                        <li class="card">
+                            <h4>Site Maintenance</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="card">
+                            <h4>Community Share Day</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                        <li class="card">
+                            <h4>Updated Privacy Policy</h4>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut iste impedit ipsam
+                                itaque a delectus rerum possimus sapiente sint, ut labore nisi.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="trending-container">
+                    <h3 id="trending-heading">Trending</h3>
+                    <ul>
+                        <li class="user-card">
+                            <a href="#">
+                                <img id="1st-user-icon" alt="1st user icon">
+                                <span>@tegan</span>
+                                <span>World Peace Builder</span>
+                            </a>
+                        </li>
+                        <li class="user-card">
+                            <a href="#">
+                                <img id="2nd-user-icon" alt="2nd user icon">
+                                <span>@morgan</span>
+                                <span>Super Cool Project</span>
+                            </a>
+                        </li>
+                        <li class="user-card">
+                            <a href="#">
+                                <img id="3rd-user-icon" alt="3rd user icon">
+                                <span>@kendall</span>
+                                <span>Life Changing App</span>
+                            </a>
+                        </li>
+                        <li class="user-card">
+                            <a href="#">
+                                <img id="4th-user-icon" alt="4th user icon">
+                                <span>@alex</span>
+                                <span>No Traffic Maker</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </main>
     </div>
