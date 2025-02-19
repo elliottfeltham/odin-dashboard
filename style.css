@@ -1,4 +1,4 @@
-/* Variables */
+/* -- Variables -- */
 
 :root {
 	--primary-background: #172b23;
@@ -15,6 +15,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	text-decoration: none;
 }
 
 * {
@@ -24,7 +25,9 @@
 html,
 body {
 	font-family: "Ubuntu";
+	color: var(--primary-text);
 	height: 100%;
+	background-color: var(--primary-background);
 }
 
 body {
@@ -46,6 +49,7 @@ textarea,
 select {
 	font: inherit;
 }
+
 ul,
 ol {
 	list-style: none;
@@ -78,6 +82,7 @@ h6 {
 
 .layout-container {
 	height: 100vh;
+	overflow: auto;
 	display: grid;
 	grid-template-columns: 250px minmax(250px, 1fr);
 	grid-template-rows: 200px minmax(250px, 1fr);
@@ -102,11 +107,15 @@ main {
 	grid-column: 2 / -1;
 	grid-row: 2 / -1;
 	border: 1px solid black;
+	overflow: auto;
 }
 
+/* Header */
+
 .header-container {
+	height: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr 1fr;
 }
 
@@ -114,26 +123,207 @@ main {
 	grid-column: 1 / 2;
 	grid-row: 1 / 2;
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 16px;
 }
 
 .account-container {
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
 	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 32px;
+	padding-right: 40px;
 }
 
 .header-text {
 	grid-column: 1 / 2;
 	grid-row: 2 / 3;
 	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 16px;
 }
 
 .header-buttons {
 	grid-column: 2/3;
 	grid-row: 2/3;
 	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 32px;
+	padding-right: 40px;
 }
 
-/* Content Styles */
+#user-icon-large,
+#search {
+	margin-left: 32px;
+}
 
+/* Navigation */
+
+.sidebar-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.dashboard-title {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 40px 32px 32px;
+	gap: 8px;
+}
+
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	gap: 16px;
+	margin: 56px 32px 0px;
+}
+
+/* Main */
+
+.main-container {
+	grid-template-columns: 3fr 1fr;
+	display: grid;
+	gap: 32px;
+}
+.main-column-one {
+	grid-column: 1 / 2;
+}
+
+.projects-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 32px;
+}
+
+.main-column-two {
+	grid-column: 2 / 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	width: 100%;
+	padding-right: 40px;
+}
+
+/* -- Content Styles --  */
+
+/* Header */
+
+input[type="search"] {
+	height: 40px;
+	width: 80%;
+	padding: 16px;
+	background-color: var(--secondary-accent);
+	color: var(--primary-text);
+	outline: none;
+	border: none;
+	border-radius: 16px;
+}
+
+button {
+	height: fit-content;
+	width: 100px;
+	padding: 8px;
+	color: var(--primary-text);
+	background-color: var(--secondary-accent);
+	border: 1px none var(--primary-text);
+	border-radius: 16px;
+}
+
+/* Navigation */
+
+#dashboard-icon {
+	border-radius: 1000px;
+}
+
+.nav-item > a {
+	display: flex;
+	width: 155px;
+	gap: 16px;
+	color: var(--primary-text);
+}
+
+/* Main */
+
+span {
+	color: var(--secondary-text);
+}
+
+.main-column-one h3 {
+	margin: 24px 40px 16px;
+}
+
+.main-column-two h3 {
+	margin: 24px 0px 16px;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--secondary-background);
+	padding: 24px;
+	border-radius: 16px;
+}
+
+.user-card > a {
+	color: var(--primary-text);
+}
+
+.trending-card,
+.announcements-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 16px;
+	width: 100%;
+	background-color: var(--secondary-background);
+	padding: 24px;
+	border-radius: 16px;
+}
+
+.project-card span {
+	font-size: 0.9rem;
+}
+
+.announcements-card,
+.trending-card {
+	font-size: 0.8rem;
+}
+
+.main-container h4 {
+	margin-bottom: 8px;
+}
+
+.user-card,
+.card {
+	width: 200px;
+}
+
+.user-card a {
+	display: flex;
+}
+
+.profile-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin-left: 16px;
+}
+
+.break-line {
+	height: 2px;
+	width: 90%;
+	background-color: var(--primary-accent);
+}
 /* Media Queries */
