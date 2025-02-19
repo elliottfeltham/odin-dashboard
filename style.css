@@ -92,7 +92,6 @@ header {
 	background-color: var(--primary-background);
 	grid-column: 2 / -1;
 	grid-row: 1 / 2;
-	border: 1px solid black;
 }
 
 nav {
@@ -106,7 +105,6 @@ main {
 	background-color: var(--primary-background);
 	grid-column: 2 / -1;
 	grid-row: 2 / -1;
-	border: 1px solid black;
 	overflow: auto;
 }
 
@@ -176,7 +174,7 @@ main {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	margin: 40px 32px 32px;
+	margin: 32px 32px 32px;
 	gap: 8px;
 }
 
@@ -268,6 +266,7 @@ span {
 }
 
 .project-card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--secondary-background);
@@ -325,5 +324,15 @@ span {
 	height: 2px;
 	width: 90%;
 	background-color: var(--primary-accent);
+}
+
+.accent-line {
+	height: 100%;
+	width: 12px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: var(--primary-accent);
+	border-radius: 8px 4px;
 }
 /* Media Queries */
