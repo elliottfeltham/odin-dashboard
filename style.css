@@ -103,6 +103,37 @@ main {
 	grid-row: 2 / -1;
 	border: 1px solid black;
 }
+
+.header-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.search-bar {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	display: flex;
+}
+
+.account-container {
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	display: flex;
+}
+
+.header-text {
+	grid-column: 1 / 2;
+	grid-row: 2 / 3;
+	display: flex;
+}
+
+.header-buttons {
+	grid-column: 2/3;
+	grid-row: 2/3;
+	display: flex;
+}
+
 /* Content Styles */
 
 /* Media Queries */
