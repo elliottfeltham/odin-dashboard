@@ -114,15 +114,13 @@ main {
 /* Header */
 
 .header-container {
-	position: relative; /* Allows z-index to work */
-	z-index: 10; /* Higher than the element below */
-	height: auto;
-	min-height: 200px;
+	position: relative;
+	z-index: 10;
+	height: 100%;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr 1fr;
 	border: 0px solid black;
-	overflow: visible;
 	box-shadow: var(--shadow);
 }
 
@@ -270,10 +268,28 @@ button:hover {
 	color: var(--primary-text);
 }
 
+a {
+	color: var(--primary-text);
+	position: relative;
+}
+
+a:hover {
+	cursor: pointer;
+	top: -2px;
+}
+
+.btn {
+	cursor: pointer;
+}
+
 /* Main */
 
 span {
 	color: var(--secondary-text);
+}
+
+.main-container h4 {
+	margin-bottom: 8px;
 }
 
 .main-column-one h3 {
@@ -309,8 +325,8 @@ span {
 	padding: 8px;
 }
 
-a {
-	color: var(--primary-text);
+project-card span {
+	font-size: 0.9rem;
 }
 
 .trending-card,
@@ -325,19 +341,7 @@ a {
 	padding: 24px;
 	border: 2px solid var(--primary-accent);
 	border-radius: 16px;
-}
-
-.project-card span {
-	font-size: 0.9rem;
-}
-
-.announcements-card,
-.trending-card {
 	font-size: 0.8rem;
-}
-
-.main-container h4 {
-	margin-bottom: 8px;
 }
 
 .user-card,
@@ -371,17 +375,3 @@ a {
 	background-color: var(--primary-accent);
 	border-radius: 8px 4px;
 }
-
-a {
-	position: relative;
-}
-
-a:hover {
-	cursor: pointer;
-	top: -2px;
-}
-
-.btn {
-	cursor: pointer;
-}
-/* Media Queries */
